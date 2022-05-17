@@ -6,6 +6,8 @@ import TopBar from "./Components/TopBar/TopBar";
 import Works from "./Components/Works/Works";
 import "./App.scss"
 
+// Added comment
+
 function App() {
   return (
     <div className="app">
