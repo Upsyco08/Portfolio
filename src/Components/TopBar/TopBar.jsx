@@ -19,7 +19,7 @@ function TopBar() {
             </div>
             <div className="right">
                 <div className="hamburger">
-                    <span className='line1'>Line 1</span>
+                    <span className='line1'></span>
                     <span className='line2'></span>
                     <span className='line3'></span>
                 </div>
