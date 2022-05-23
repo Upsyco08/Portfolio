@@ -2,12 +2,12 @@ import './TopBar.scss'
 import EmailIcon from '@mui/icons-material/Email';
 import PersonIcon from '@mui/icons-material/Person';
 
-function TopBar() {
+function TopBar({menuOpen,setMenuOpen}) {
   return (
-    <div className='topBar active'>
+    <div className={"topBar " + (menuOpen && "active")}>
         <div className="wrapper">
             <div className="left">
-                <a href="#intro" className='logo'>Genius.</a>
+                <a href="#intro" className='logo'>Sandesh</a>
                 <div className='itemContainer'>
                     <PersonIcon className='PersonIcon'/>
                     <span>+977 9818174850</span>
@@ -18,7 +18,7 @@ function TopBar() {
                 </div>
             </div>
             <div className="right">
-                <div className="hamburger">
+                <div className="hamburger" onClick={()=>setMenuOpen(!menuOpen)}>
                     <span className='line1'></span>
                     <span className='line2'></span>
                     <span className='line3'></span>

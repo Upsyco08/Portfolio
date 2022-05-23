@@ -4,10 +4,11 @@
     width: 100%;
     height: 70px;
     background-color: white;
-    color: blue;
+    color: $mainColor;
     position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 3;
+    transition: all 1s ease;
 
     .wrapper{
         padding:10px 30px;
@@ -25,12 +26,12 @@
                 font-weight: 700;
                 text-decoration: none;
                 color: inherit;
-                margin-right: 20px;
+                margin-right: 10px;
             }
             .itemContainer{
                 display: flex;
                 align-items: center;
-                margin-left: 20px;
+                margin-left: 10px;
             }
             .EmailIcon{
                 font-size: 20px;
@@ -47,7 +48,6 @@
         }
 
         .right{
-
             .hamburger{
                 width: 32px;
                 height: 25px;
@@ -60,9 +60,33 @@
                     width: 100%;
                     height: 3px;
                     background-color: $mainColor;
+                    transform-origin:left;
+                    transition: all 2s ease;
                 }
                 
             }
         }
 
+&.active{
+    background-color: $mainColor;
+    color: white;
+    .hamburger{
+        span{
+            transform: origin;
+            &:first-child{
+                background-color: white;
+                transform: rotate(45deg);
+            }
+            &:nth-child(2){
+                opacity:0;
+            }
+            &:last-child{
+                background-color: white;
+                transform: rotate(-45deg);
+            }
+        }
+    }
 }
+
+}
+
