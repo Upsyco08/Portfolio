@@ -1,13 +1,13 @@
 import './Portfolio.scss'
 import PortfolioList from '../PortfolioList/PortfolioList'
+import { useEffect, useState } from 'react'
+
 import {  featuredPortfolio,
   webPortfolio,
   mobilePortfolio,
   designPortfolio,
   contentPortfolio
 } from "../../data.js"
-import { useEffect, useState } from 'react'
-
 function Portfolio() {
   const [selected,setSelected]=useState("featured");
   const [data,setData]=useState([]);
