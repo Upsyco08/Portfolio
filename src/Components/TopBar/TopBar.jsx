@@ -4,7 +4,7 @@ import PersonIcon from '@mui/icons-material/Person';
 
 function TopBar() {
   return (
-    <div className='topBar'>
+    <div className='topBar active'>
         <div className="wrapper">
             <div className="left">
                 <a href="#intro" className='logo'>Genius.</a>
