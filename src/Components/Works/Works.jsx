@@ -1,28 +1,46 @@
 import './Works.scss';
-import mobile from "../../Images/mobile.png";
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { useState } from 'react';
+import { worksData } from "../../WorksData"
 
 function Works() {
+  const [currentSlide,setCurrentSlide] = useState(0);
+  
+  const handleClick = (direction) => {
+    direction === "left"
+      ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 2)
+      : setCurrentSlide(currentSlide < worksData.length -1 ? currentSlide + 1 : 0);
+  };
+  
+
   return (
     <div className="works" id="works">
-      <div className='slider'>
+      <div 
+        className='slider' 
+        style={{ transform: `translateX(-${currentSlide * 100}vw)` }}>
+        {worksData.map(data=>(
         <div className='container'>
           <div className='item'>
             <div className='left'>
               <div className='leftContainer'>
                 <div className='imgContainer'>
-                  <img src={mobile} alt="mobile" />
+                  <img src={data.icon} alt="Logo" />
                 </div>
-                <h2>Title</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto perferendis reprehenderit nostrum quae laboriosam, recusandae aliquid dolor, totam, neque expedita atque voluptatem consequuntur dolorum laborum tempore! Quis nesciunt corporis laudantium!</p>
+                <h2>{data.title}</h2>
+                <p>{data.desc}</p>
                 <span>Projects</span>
               </div>
             </div>
             <div className='right'>
-              <img src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930" alt="" />
+              <img src={data.img} alt="" />
             </div>
           </div>
         </div>
+        ))}
       </div>
+    <ArrowBackIosNewIcon className='arrow left' onClick={()=>handleClick('left')}/>
+    <ArrowForwardIosIcon className='arrow right' onClick={()=>handleClick()}/>
     </div>
   )
 }

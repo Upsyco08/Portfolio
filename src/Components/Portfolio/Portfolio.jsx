@@ -7,32 +7,12 @@ import {  featuredPortfolio,
   mobilePortfolio,
   designPortfolio,
   contentPortfolio
-} from "../../data.js"
+} from "../../Data.js"
+import { list } from "../../PortfolioList"
 function Portfolio() {
   const [selected,setSelected]=useState("featured");
   const [data,setData]=useState([]);
-  const list=[
-    { 
-      id:"featured",
-      title:"Featured",
-    },
-    { 
-      id:"web",
-      title:"Web App",
-    },
-    { 
-      id:"mobile",
-      title:"Mobile App",
-    },
-    { 
-      id:"design",
-      title:"Design",
-    },
-    { 
-      id:"content",
-      title:"Content",
-    },
-  ]
+
   useEffect(()=>{
     switch(selected){
       case "featured":
