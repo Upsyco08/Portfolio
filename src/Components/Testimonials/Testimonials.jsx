@@ -1,30 +1,32 @@
 import './Testimonials.scss'
-import ReplyIcon from '@mui/icons-material/Reply';
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import Photo from "../../Images/img2.jpg"
+import EmailIcon from '@mui/icons-material/Email';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import {testimonialsData} from "../../TestimonialsData"
 
 function Testimonials() {
   return (
     <div className="testimonials" id="testimonials">
       <h1>Testimonials</h1>
-        <div classname="container">
-          <div className='card'>
-            <div className='top'>
-              <ReplyIcon className='leftIcon'/>
-              <img src={Photo} className="myImage" alt="Sandesh" />
-              <YouTubeIcon className='rightIcon'/>
-            </div>
-            <div className="center">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              </p>
-            </div>
-            <div className='bottom'>
-              <h3>Sushan Shakya</h3>
-              <h4>Senior Engineer at LeapFrog</h4>
-            </div>
+      <div className='container'>
+      {testimonialsData.map(d=>(
+        <div className={d.featured ? 'card featured' : "card"}>
+          <div className='top'>
+            <EmailIcon color="action" className='leftIcon'/>
+            <img src={d.img} className="myImage" alt="Sandesh" />
+            <LinkedInIcon color="primary" className='rightIcon'/>
+          </div>
+          <div className="center">
+            <p>
+              {d.desc}
+            </p>
+          </div>
+          <div className='bottom'>
+            <h3>{d.name}</h3>
+            <h4>{d.title}</h4>
           </div>
         </div>
+      ))}    
+      </div>
     </div>
   )
 }
