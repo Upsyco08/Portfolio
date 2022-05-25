@@ -16,6 +16,10 @@
 
     &.active{
         right:0px;
+        @include mobile{
+            width:400px;
+            right:0px;
+        }
     }
     ul{
         margin: 0;

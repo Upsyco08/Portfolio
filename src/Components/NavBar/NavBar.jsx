@@ -1,10 +1,10 @@
-import './TopBar.scss'
+import './NavBar.scss'
 import EmailIcon from '@mui/icons-material/Email';
 import PersonIcon from '@mui/icons-material/Person';
 
-function TopBar({menuOpen,setMenuOpen}) {
+function NavBar({menuOpen,setMenuOpen}) {
   return (
-    <div className={"topBar " + (menuOpen && "active")}>
+    <div className={"navBar " + (menuOpen && "active")}>
         <div className="wrapper">
             <div className="left">
                 <a href="#intro" className='logo'>Sandesh</a>
@@ -29,4 +29,4 @@ function TopBar({menuOpen,setMenuOpen}) {
   )
 }
 
-export default TopBar
+export default NavBar
