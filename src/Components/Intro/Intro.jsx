@@ -1,5 +1,4 @@
 import './Intro.scss'
-import profilePicture from "../../Images/img1_edited.png"
 import arrow from "../../Images/arrow.png"
 import { useEffect, useRef } from 'react'
 import { init } from 'ityped';
@@ -25,7 +24,7 @@ function Intro() {
     <div className='intro' id="intro">
       <div className='left'>
         <div className='imgContainer'>
-          <img src={profilePicture} alt="Profile Picutre" />
+          <img src="https://raw.githubusercontent.com/Upsyco08/Portfolio/main/src/Images/img1_edited.png" alt="Profile Picutre" />
         </div>
       </div>
       <div className='right'>
