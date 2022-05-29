@@ -20,7 +20,7 @@ function Works() {
         className='slider' 
         style={{ transform: `translateX(-${currentSlide * 100}vw)` }}>
         {educationData.map(data=>(
-        <div className='container'>
+          <div className='container'>
           <div className='item'>
             <div className='left'>
               <div className='leftContainer'>
