@@ -26,6 +26,7 @@ function Works() {
               <div className='leftContainer'>
                 <h2>{data.title}</h2>
                 <h3>{data.location}</h3>
+                <h4>{data.time}</h4>
                 <p>{data.desc}</p>
                 <span>{data.info}</span>
               </div>
