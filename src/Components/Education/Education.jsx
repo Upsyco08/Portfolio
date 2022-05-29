@@ -16,6 +16,9 @@ function Works() {
 
   return (
     <div className="works" id="works">
+      <div className='works__top'>
+        <h1>EDUCATION:</h1>
+      </div>
       <div 
         className='slider' 
         style={{ transform: `translateX(-${currentSlide * 100}vw)` }}>
