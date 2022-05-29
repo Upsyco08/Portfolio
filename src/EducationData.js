@@ -3,7 +3,7 @@ export const educationData = [
       id: "1",
       title: "Kathmandu Engineering College(KEC)",
       location: "Kalimati, Kathmandu",
-      info: "COLLEGE HEllo",
+      info: "COLLEGE",
       desc:
         "I pursued my Bachelors degree in Computer Engineering from Kathmandu Engineering College.",
       img:
