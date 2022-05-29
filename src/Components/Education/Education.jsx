@@ -1,8 +1,8 @@
-import './Works.scss';
+import './Education.scss';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { useState } from 'react';
-import { worksData } from "../../WorksData"
+import { educationData } from "../../EducationData"
 
 function Works() {
   const [currentSlide,setCurrentSlide] = useState(0);
@@ -10,7 +10,7 @@ function Works() {
   const handleClick = (direction) => {
     direction === "left"
       ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 2)
-      : setCurrentSlide(currentSlide < worksData.length -1 ? currentSlide + 1 : 0);
+      : setCurrentSlide(currentSlide < educationData.length -1 ? currentSlide + 1 : 0);
   };
   
 
@@ -19,17 +19,15 @@ function Works() {
       <div 
         className='slider' 
         style={{ transform: `translateX(-${currentSlide * 100}vw)` }}>
-        {worksData.map(data=>(
+        {educationData.map(data=>(
         <div className='container'>
           <div className='item'>
             <div className='left'>
               <div className='leftContainer'>
-                <div className='imgContainer'>
-                  <img src={data.icon} alt="Logo" />
-                </div>
                 <h2>{data.title}</h2>
+                <h3>{data.location}</h3>
                 <p>{data.desc}</p>
-                <span>Projects</span>
+                <span>{data.info}</span>
               </div>
             </div>
             <div className='right'>
