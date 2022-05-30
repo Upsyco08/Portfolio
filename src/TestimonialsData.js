@@ -1,7 +1,7 @@
 export const testimonialsData = [
     {
       id: 1,
-      name: "Pradip Raj Shakya",
+      name: "Er.Pradip Raj Shakya",
       title: "Senior Developer at Deerwalk Inc.",
       img: "https://raw.githubusercontent.com/Upsyco08/Portfolio/main/src/Images/pradip.jpg",
       desc:
@@ -9,7 +9,7 @@ export const testimonialsData = [
     },
     {
       id: 2,
-      name: "Sushan Raj Shakya",
+      name: "Er.Sushan Raj Shakya",
       title: "Senior Developer at Leapfrog Tech.",
       img: "https://raw.githubusercontent.com/Upsyco08/Portfolio/main/src/Images/sushan.jpg",
       desc:
@@ -18,7 +18,7 @@ export const testimonialsData = [
     },
     {
       id: 3,
-      name: "Shrijan Bajracharya",
+      name: "Er.Shrijan Bajracharya",
       title: "Full Stack Developer at Core Software Integrated",
       img: "https://raw.githubusercontent.com/Upsyco08/Portfolio/main/src/Images/shrijan.jpg",
       desc:
